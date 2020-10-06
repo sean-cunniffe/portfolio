@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  font-family: "Open Sans";
+}
+
+body{
+  /*Remove padding and margin around body*/
+  padding:0;
+  margin:0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #4D4D4D;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: white;
+}
+
