@@ -1,4 +1,4 @@
-:root{--vh:0px;font-family:Open Sans}body{padding:0;margin:0}.page-wrapper{height:calc(var(--vh,vh)*100);width:100%}body::-webkit-scrollbar{width:.25rem}body::-webkit-scrollbar-track{background:#4d4d4d}body::-webkit-scrollbar-thumb{background:#fff}
+:root{font-family:Open Sans}body{padding:0;margin:0}.page-wrapper{height:100%;width:100%}body::-webkit-scrollbar{width:.25rem}body::-webkit-scrollbar-track{background:#4d4d4d}body::-webkit-scrollbar-thumb{background:#fff}
 
 
 /*!
