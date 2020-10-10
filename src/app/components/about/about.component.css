@@ -1,0 +1,98 @@
+*{
+  --icon-size: 3vw;
+  --para-size: 1.5vw;
+  font-size: 1.5vw;
+}
+
+.parent{
+  position: static;
+  flex-direction: column;
+  display: flex;
+  min-width: 100%;
+  height: 100%
+}
+
+.profile-attributes-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  justify-content: space-between;
+}
+
+.attribute-box{
+  width: fit-content;
+  min-width: 35%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  padding:20px 0 20px 0;
+}
+.attribute-box > i{
+  color: var(--primary-color);
+  font-size: var(--icon-size);
+  min-width: 100px;
+  text-align: center;
+}
+
+.att-data{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paragraph{
+  margin: 0 5% 0 5%;
+  font-size: var(--para-size);
+}
+.city-container{
+  position: relative;
+  width: 90%;
+  max-height: 20%;
+  min-height: 20%;
+  height: 20%;
+  margin: auto 5% 0 5%;
+  background-image: url("/assets/images/city-background.svg");
+  background-origin: padding-box;
+  background-size: contain;
+  overflow-x: hidden;
+}
+.car-container{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 2%;
+  min-width: 25px;
+  transform: translateX(-100%);
+  animation: car-moving 20s infinite;
+}
+
+@keyframes car-moving {
+  from{left:0;  transform: translateX(-100%)}
+  49.9%{left:100%;transform: translateX(0) scaleX(1);}
+  50%{left:100%;transform: translateX(0) scaleX(-1);}
+  99.9%{left:0;transform: translateX(-100%) scaleX(-1);}
+  to{left:0;transform: translateX(-100%) scaleX(1);}
+}
+
+#car{
+  width: 100%;
+  height:100%;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+*{
+  font-size: 5vw;
+  --icon-size: 10vw;
+  --para-size: 5vwvw;
+}
+  .profile-attributes-box{
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
+
