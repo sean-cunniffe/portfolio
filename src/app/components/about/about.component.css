@@ -9,12 +9,11 @@
   flex-direction: column;
   display: flex;
   min-width: 100%;
-  height: 100%
+  height: 100vh;
 }
 
 .profile-attributes-box{
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   width: 50%;
   margin: 0 auto 0 auto;
@@ -23,7 +22,7 @@
 
 .attribute-box{
   width: fit-content;
-  min-width: 35%;
+  min-width: 43%;
   display: flex;
   flex-direction: row;
   height: fit-content;
@@ -53,7 +52,7 @@
   min-height: 20%;
   height: 20%;
   margin: auto 5% 0 5%;
-  background-image: url("/assets/images/city-background.svg");
+  background: url("assets/city-background.svg");
   background-origin: padding-box;
   background-size: contain;
   overflow-x: hidden;
@@ -83,15 +82,16 @@
 
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
 *{
   font-size: 5vw;
   --icon-size: 10vw;
-  --para-size: 5vwvw;
+  --para-size: 5vw;
 }
   .profile-attributes-box{
     flex-direction: column;
     width: 100%;
+    flex-wrap: wrap;
   }
 
 }

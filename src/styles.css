@@ -1,7 +1,6 @@
 :root {
-  --vh: 0px;
   font-family: "Open Sans";
-  --background-color: #6C63FF;
+  --background-color: #ffffff;
   --primary-color: #6C63FF;
 }
 
@@ -11,12 +10,6 @@ body {
   margin: 0;
 }
 
-
-.page-wrapper {
-  height: 100%;
-  height: calc(var(--vh, vh) * 100); /* makes compatible with chrome mobile*/
-  width: 100%;
-}
 
 body::-webkit-scrollbar {
   width: 0.25rem;
