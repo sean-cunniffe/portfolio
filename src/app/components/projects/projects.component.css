@@ -1,0 +1,133 @@
+*{
+  --icon-size: 3vw;
+  --para-size: 1.2vw;
+  --gh-logo-color: #000000;
+  font-size: 1.5vw;
+}
+.parent{
+  width: 100%;
+  min-height:100vh;
+}
+
+.project-box{
+  max-width:100vw;
+  height: fit-content;
+  margin: 2vh 5% 2vh 5%;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.project-dis{
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 0 3%;
+}
+
+.project-dis > h3{
+  font-size: var(--para-size);
+  margin: 5px 0 5px 0 ;
+}
+
+.project-thumbnail{
+  align-self: center;
+  width:20vw;
+  height:auto;
+}
+
+.project-name{
+  margin: 0;
+  font-size: 2vw;
+
+}
+.gh-link{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+}
+.live-demo{
+  min-width: fit-content;
+  margin: 0 5px 0 5px;
+  align-self: center;
+  padding: 5px;
+  animation: pulse-border 2s linear infinite alternate;
+  cursor: pointer;
+  background: linear-gradient(90deg,var(--primary-color) 50%, var(--background-color)50%);
+  background-size: 200%;
+  background-position-x: 100%;
+}
+
+.live-demo:hover{
+  animation: demo-hover 0.5s linear forwards;
+}
+@keyframes demo-hover {
+  from{background-position: 100% 0;color: black}
+  to{background-position: 0 0;color: var(--background-color)}
+}
+
+.gh-logo{
+  fill-rule:evenodd;
+  fill:var(--gh-logo-color);
+  fill-opacity:1;
+}
+.gh-logo-container{
+  margin-right: 20px;
+  align-self: center;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.gh-logo-container:hover  #gh-background{
+  animation: logo-hover 0.5s forwards linear;
+}
+
+#gh-border{
+  fill:none;
+  stroke:var(--primary-color);
+  stroke-width:3;
+  animation: pulse-gh 1s linear alternate infinite;
+}
+.gh-logo-container:hover #gh-border{
+  animation-play-state: paused;
+}
+@keyframes pulse-gh {
+  from{opacity: 0}
+  to{opacity: 1}
+}
+
+@keyframes logo-hover {
+  from {fill: #000000}
+  to {fill: var(--primary-color)}
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .project-box{
+    flex-direction: column;
+  }
+  .project-name{
+    margin: 0;
+    font-size: 7vw;
+    align-self: center;
+    text-align: center;
+  }
+  .project-dis{
+    align-self: center;
+  }
+  .project-dis >h3{
+    text-align: center;
+  }
+  .gh-link{
+    align-self: center;
+  }
+  .gh-logo-container {
+    margin-right: 0;
+  }
+
+  *{
+    font-size: 5vw;
+    --icon-size: 10vw;
+    --para-size: 5vw;
+  }
+}
