@@ -34,7 +34,7 @@
 
 .project-thumbnail{
   align-self: center;
-  width:20vw;
+  width:20%;
   height:auto;
 }
 
@@ -115,6 +115,9 @@
     font-size: 7vw;
     align-self: center;
     text-align: center;
+  }
+  .project-thumbnail{
+    width: 100%;
   }
   .project-dis{
     align-self: center;
