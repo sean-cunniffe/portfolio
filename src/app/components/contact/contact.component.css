@@ -1,11 +1,13 @@
 * {
-  --para-size: 1.2vw;
+  --para-size: 24px;
   font-size: 1.5vw;
 }
 
 .parent {
   position: relative;
   width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
   min-height: 100vh;
   overflow-y: hidden;
 }
@@ -27,6 +29,8 @@
 
 .contact-container > h3 {
   margin-left: 5px;
+  font-weight: lighter;
+  font-family: "Roboto";
 }
 
 .programmer {

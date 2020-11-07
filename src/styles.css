@@ -2,6 +2,7 @@
   font-family: "Open Sans";
   --background-color: #ffffff;
   --primary-color: #6C63FF;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
 #content{
   visibility: hidden;
 }
+
 
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -42,6 +44,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section-title > h1 {
+  font-size: 24px;
   position: relative;
   width: fit-content;
   background: white;
@@ -62,15 +65,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 #center {
-  animation: pulse-color1 2s infinite linear;
+  animation: pulse-color1 1s infinite linear;
 }
 
 #left-center, #right-center {
-  animation: pulse-color2 2s infinite linear;
+  animation: pulse-color2 1s infinite linear;
 }
 
 #left-outer, #right-outer, #top-outer {
-  animation: pulse-color3 2s infinite linear;
+  animation: pulse-color3 1s infinite linear;
 }
 
 @keyframes pulse-color1 {

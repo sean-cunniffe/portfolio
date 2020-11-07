@@ -1,11 +1,12 @@
 *{
   --icon-size: 3vw;
-  --para-size: 1.2vw;
+  --para-size: 18px;
   --gh-logo-color: #000000;
-  font-size: 1.5vw;
 }
 .parent{
   width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
   min-height:100vh;
 }
 
@@ -25,6 +26,8 @@
 }
 
 .project-dis > h3{
+  font-weight: lighter;
+  font-family: "Roboto";
   font-size: var(--para-size);
   margin: 5px 0 5px 0 ;
 }
@@ -37,7 +40,7 @@
 
 .project-name{
   margin: 0;
-  font-size: 2vw;
+  font-size: 28px;
 
 }
 .gh-link{
@@ -48,11 +51,12 @@
 .live-demo{
   min-width: fit-content;
   margin: 0 5px 0 5px;
+  font-size: 18px;
   align-self: center;
   padding: 5px;
   animation: pulse-border 2s linear infinite alternate;
   cursor: pointer;
-  background: linear-gradient(90deg,var(--primary-color) 50%, var(--background-color)50%);
+  background: linear-gradient(90deg,var(--primary-color) 49%, var(--background-color)49%);
   background-size: 200%;
   background-position-x: 100%;
 }
