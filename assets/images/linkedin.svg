@@ -7,111 +7,115 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="linkedin.svg"
-   xml:space="preserve"
-   viewBox="0 0 47 47"
-   height="47"
-   width="47"
-   y="0px"
-   x="0px"
+   version="1.1"
    id="Capa_1"
-   version="1.1"><metadata
+   x="0px"
+   y="0px"
+   width="47"
+   height="47"
+   viewBox="0 0 47 47"
+   xml:space="preserve"
+   sodipodi:docname="linkedin.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"><metadata
    id="metadata915"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs913" /><sodipodi:namedview
-   inkscape:current-layer="Capa_1"
-   inkscape:window-maximized="1"
-   inkscape:window-y="-8"
-   inkscape:window-x="-8"
-   inkscape:cy="-19.45613"
-   inkscape:cx="-52.713427"
-   inkscape:zoom="0.95667388"
-   fit-margin-bottom="0"
-   fit-margin-right="0"
-   fit-margin-left="0"
-   fit-margin-top="0"
-   showgrid="false"
-   id="namedview911"
-   inkscape:window-height="1017"
-   inkscape:window-width="1920"
-   inkscape:pageshadow="2"
-   inkscape:pageopacity="0"
-   guidetolerance="10"
-   gridtolerance="10"
-   objecttolerance="10"
-   borderopacity="1"
+   inkscape:document-rotation="0"
+   pagecolor="#ffffff"
    bordercolor="#666666"
-   pagecolor="#ffffff" />
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   id="namedview911"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="0.95667388"
+   inkscape:cx="-52.713427"
+   inkscape:cy="-19.45613"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Capa_1" />
 <g
-   transform="scale(0.09215686)"
-   id="g878">
+   style="fill:#14487c;fill-opacity:1"
+   id="g878"
+   transform="scale(0.09215686)">
 	<g
+   style="fill:#14487c;fill-opacity:1"
    id="post-linkedin">
 		<path
-   id="path875"
-   d="M 459,0 H 51 C 22.95,0 0,22.95 0,51 v 408 c 0,28.05 22.95,51 51,51 h 408 c 28.05,0 51,-22.95 51,-51 V 51 C 510,22.95 487.05,0 459,0 Z M 153,433.5 H 76.5 V 204 H 153 Z M 114.75,160.65 c -25.5,0 -45.9,-20.4 -45.9,-45.9 0,-25.5 20.4,-45.9 45.9,-45.9 25.5,0 45.9,20.4 45.9,45.9 0,25.5 -20.4,45.9 -45.9,45.9 z M 433.5,433.5 H 357 V 298.35 c 0,-20.399 -17.85,-38.25 -38.25,-38.25 -20.4,0 -38.25,17.851 -38.25,38.25 V 433.5 H 204 V 204 h 76.5 v 30.6 c 12.75,-20.4 40.8,-35.7 63.75,-35.7 48.45,0 89.25,40.8 89.25,89.25 z" />
+   style="fill:#14487c;fill-opacity:1"
+   d="M 459,0 H 51 C 22.95,0 0,22.95 0,51 v 408 c 0,28.05 22.95,51 51,51 h 408 c 28.05,0 51,-22.95 51,-51 V 51 C 510,22.95 487.05,0 459,0 Z M 153,433.5 H 76.5 V 204 H 153 Z M 114.75,160.65 c -25.5,0 -45.9,-20.4 -45.9,-45.9 0,-25.5 20.4,-45.9 45.9,-45.9 25.5,0 45.9,20.4 45.9,45.9 0,25.5 -20.4,45.9 -45.9,45.9 z M 433.5,433.5 H 357 V 298.35 c 0,-20.399 -17.85,-38.25 -38.25,-38.25 -20.4,0 -38.25,17.851 -38.25,38.25 V 433.5 H 204 V 204 h 76.5 v 30.6 c 12.75,-20.4 40.8,-35.7 63.75,-35.7 48.45,0 89.25,40.8 89.25,89.25 z"
+   id="path875" />
 	</g>
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g880">
+   id="g880"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g882">
+   id="g882"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g884">
+   id="g884"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g886">
+   id="g886"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g888">
+   id="g888"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g890">
+   id="g890"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g892">
+   id="g892"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g894">
+   id="g894"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g896">
+   id="g896"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g898">
+   id="g898"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g900">
+   id="g900"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g902">
+   id="g902"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g904">
+   id="g904"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g906">
+   id="g906"
+   transform="translate(-231.5,-231.5)">
 </g>
 <g
-   transform="translate(-231.5,-231.5)"
-   id="g908">
+   id="g908"
+   transform="translate(-231.5,-231.5)">
 </g>
 </svg>
