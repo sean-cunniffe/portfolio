@@ -1,7 +1,9 @@
 :root {
   font-family: "Open Sans";
-  --background-color: #ffffff;
-  --primary-color: #6C63FF;
+  --background-color: #f8f8ff;
+  --primary-color: #14487C;
+  --side-bar-color: #14487C;
+  --content-height: 100vh;
   scroll-snap-type: y proximity;
 }
 
@@ -20,8 +22,15 @@ body {
 }
 #content{
   visibility: hidden;
+  width:90%;
+  top:0;
+  margin-left: auto;
+  background: var(--background-color);
 }
 
+.selectable{
+  cursor: pointer;
+}
 
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -36,7 +45,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section-title {
-  position: relative;
   width: 100%;
   height: 10vh;
   padding-top: 1%;
@@ -47,7 +55,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 24px;
   position: relative;
   width: fit-content;
-  background: white;
+  background: var(--background-color);
   margin: 0 auto 0 auto;
   padding: 5px;
   top: 50%;
@@ -64,50 +72,56 @@ body::-webkit-scrollbar-thumb {
   background: var(--primary-color);
 }
 
-#center {
-  animation: pulse-color1 1s infinite linear;
+#side-bar{
+  position: fixed;
+  left:0;
+  width:10%;
+  height:100vh;
+  background: var(--side-bar-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  visibility: hidden;
+  overflow: hidden;
 }
 
-#left-center, #right-center {
-  animation: pulse-color2 1s infinite linear;
+#side-bar > h5{
+  color: white;
 }
 
-#left-outer, #right-outer, #top-outer {
-  animation: pulse-color3 1s infinite linear;
+#side-bar > h5:hover{
+  background: linear-gradient(90deg,var(--side-bar-color) 97%, grey 97%);
+}
+#top-bar{
+  position: fixed;
+  z-index: 2;
+  transform: translateY(-100%);
+  height:10vh;
+  width: 100%;
+  background: var(--side-bar-color);
+  display: flex;
+  flex-direction: row;
 }
 
-@keyframes pulse-color1 {
-  from {
-    opacity: 0;
-  }
-  16.5%{
-    opacity: 0.5;
-  }
-  33%{
-    opacity: 0;
-  }
+#top-bar > i{
+  font-size: 30px;
 }
-@keyframes pulse-color2 {
-  33% {
-    opacity: 0;
-  }
-  49.5%{
-    opacity: 0.5;
-  }
-  66%{
-    opacity: 0;
-  }
 
+.profile-image-container{
+  width:75% !important;
+  align-self: center;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 100%;
 }
-@keyframes pulse-color3 {
-  66%{
-    opacity: 0;
+
+
+@media only screen and (max-width: 768px) {
+  #side-bar{
+    transform: translateX(-100%);
   }
-  82.5%{
-    opacity: 0.5;
-  }
-  to{
-    opacity: 0;
+  #content{
+    width:100%;
   }
 }
 

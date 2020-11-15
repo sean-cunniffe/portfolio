@@ -4,12 +4,12 @@
 }
 
 .parent {
-  position: relative;
-  width: 100%;
   max-width: 1360px;
+  height: var(--content-height);
   margin: 0 auto;
-  min-height: 100vh;
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color);
 }
 
 .contact-flex {
@@ -18,7 +18,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  margin: 0 auto 0 auto;
+  margin: auto auto auto auto;
 }
 
 .contact-container {
@@ -33,36 +33,39 @@
   font-family: "Roboto";
 }
 
-.programmer {
-  max-width: 100%;
+.city-container{
+  position: relative;
+  width: 90%;
+  height: 20vh;
+  margin: auto 5% 0 5%;
+  background: url("assets/city-background.svg");
+  background-origin: padding-box;
+  background-size: contain;
+  overflow-x: hidden;
+}
+.car-container{
   position: absolute;
-  height: 30%;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left:0;
+  width: 2%;
+  min-width: 25px;
+  transform: translateX(-100%);
+  animation: car-moving 20s infinite;
 }
 
-#hair {
-  animation: move-hair 5s infinite linear;
+@keyframes car-moving {
+  from{left:0;  transform: translateX(-100%)}
+  49.9%{left:100%;transform: translateX(0) scaleX(1);}
+  50%{left:100%;transform: translateX(0) scaleX(-1);}
+  99.9%{left:0;transform: translateX(-100%) scaleX(-1);}
+  to{left:0;transform: translateX(-100%) scaleX(1);}
 }
 
-@keyframes move-hair {
-  from {
-    transform: translateX(0)
-  }
-  25% {
-    transform: translateX(-0.8%)
-  }
-  50% {
-    transform: translateX(0)
-  }
-  75% {
-    transform: translateX(0.8%)
-  }
-  to {
-    transform: translateX(0)
-  }
+#car{
+  width: 100%;
+  height:100%;
 }
+
 
 @media only screen and (max-width: 768px) {
   * {

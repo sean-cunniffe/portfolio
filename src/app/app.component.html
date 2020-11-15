@@ -1,53 +1,40 @@
 <div id="loading-screen">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 48 47.5"
-    height="47.5mm"
-    width="48mm">
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0;"
-      d="M 41.668673,3.1372783 48.094272,31.863482 24.092781,47.549493 40.753342,24.400546 31.314218,10.513657 Z"
-      id="right-outer" />
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0"
-      d="M 24.148825,15.618189 31.314218,10.513657 24.223901,0.08234644 17.136177,10.524466 Z"
-      id="top-outer" />
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0"
-      d="M 17.136177,10.524466 6.7058751,2.9482883 0.09128913,31.296522 24.092781,47.549493 8.1163241,23.813131 Z"
-      id="left-outer" />
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;opacity:0"
-      d="M 24.092781,47.549493 8.1163241,23.813131 17.136177,10.524466 l 7.012648,5.093723 -5.825542,4.150041 z"
-      id="left-center" />
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;opacity:0;stroke-miterlimit:4;stroke-dasharray:none"
-      d="m 24.092781,47.549493 16.660561,-23.148947 -9.439124,-13.886889 -7.165393,5.104532 5.713457,4.150039 z"
-      id="right-center" />
-    <path
-      style="fill:#ffffff;stroke:none;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;opacity:0"
-      d="m 24.148825,15.618189 -5.825542,4.150041 5.769498,27.781263 5.769501,-27.781265 z"
-      id="center" />
-    <path
-      id="left-par"
-      d="M 0.09128913,31.296523 24.092781,47.549493 29.862281,19.768228 6.7058751,2.9482884 Z"
-      style="display:inline;fill:#6c63ff;fill-opacity:0.301961;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-      style="display:inline;fill:#6c63ff;fill-opacity:0.301961;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-      d="M 48.094268,31.863483 24.092781,47.549493 18.323283,19.76823 41.668668,3.1372788 Z"
-      id="right-par" />
-    <path
-      style="display:inline;opacity:0.999;fill:#6c63ff;fill-opacity:0.301961;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-      d="M 8.1163241,23.813131 24.092781,47.549493 40.753342,24.400546 24.223901,0.08234644 Z"
-      id="middle-par" />
-  </svg>
+  <div class="w-100 d-flex">
+  <div class="spinner-grow ml-auto mr-auto" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+    <div class="spinner-grow ml-auto mr-auto" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow ml-auto mr-auto" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
   <h3 style="text-align: center">LOADING</h3>
 </div>
+<div id="side-bar">
+  <div class="w-75 profile-image-container mb-4">
+    <img id="sideBarPicture" class="w-100" src="/assets/images/profilePicture.jpg" alt="">
+  </div>
+  <h5 id="home" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable"
+      (click)="scrollTo('home-content')">
+    Home</h5>
+  <h5 id="about" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable"
+      (click)="scrollTo('about-content')">
+    About me</h5>
+  <h5 id="projects" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable"
+      (click)="scrollTo('projects-content')">Projects</h5>
+  <h5 id="contacts" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable"
+      (click)="scrollTo('contacts-content')">Contacts</h5>
+  <!--  <div class="mt-auto">-->
+  <!--    <fa-icon [icon]="angular" size="2x"></fa-icon>-->
+  <!--  </div>-->
+</div>
 <div id="content">
-  <app-home></app-home>
-  <app-about></app-about>
-  <app-projects></app-projects>
-  <app-contact></app-contact>
+  <app-home id="home-content"></app-home>
+  <app-about id="about-content"></app-about>
+  <app-projects id="projects-content"></app-projects>
+  <app-contact id="contacts-content"></app-contact>
 </div>
 
 

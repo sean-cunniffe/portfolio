@@ -8,6 +8,7 @@
   max-width: 1360px;
   margin: 0 auto;
   min-height:100vh;
+  background: var(--background-color);
 }
 
 .project-box{
@@ -123,7 +124,7 @@
     align-self: center;
   }
   .project-dis >h3{
-    text-align: center;
+    text-align: left;
   }
   .gh-link{
     align-self: center;
