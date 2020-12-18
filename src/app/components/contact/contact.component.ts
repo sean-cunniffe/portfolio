@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Profile} from '../../common/Profile';
+import {ProfileService} from '../../services/profile.service';
 
 
 @Component({
@@ -8,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  profile :Profile = new Profile();
+  email:string = '';
+  linkedin:string = '';
+  phone:string = '';
 
-  constructor() { }
+  constructor(private profileService:ProfileService) { }
 
   ngOnInit(): void {
+    this.profileService.profile.subscribe(response =>{
+      this.profile = response;
+      for(let contact of this.profile.contacts){
+        switch(contact.type){
+
+          case 'CONTACTTYPE_PHONE': this.phone = contact.contactInfo;break;
+          case 'CONTACTTYPE_LINKEDIN': this.linkedin = contact.contactInfo;break;
+          case 'CONTACTTYPE_EMAIL': this.email = contact.contactInfo;break;
+        }
+      }
+    })
+
   }
 
 }

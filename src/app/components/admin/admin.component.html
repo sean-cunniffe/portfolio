@@ -1,0 +1,102 @@
+<div class="w-100 d-flex flex-column align-items-center mt-2">
+  <h3 class="w-50 font-weight-light border-bottom border-primary">Profile</h3>
+  <div class="w-50 d-flex flex-column">
+    <img id="profile-pic" class="w-50 ml-auto mr-auto" src="{{profile.imageUrl}}" alt="">
+    <label class="btn-secondary w-100 pl-1">
+      <input class="w-100" id="profile-pic-value" type="text" value="{{profile.imageUrl}}"
+             (input)="profile.imageUrl = $event.target.value">
+    </label>
+  </div>
+  <div class="w-50 d-flex flex-row">
+    <div class="w-50 mt-3 d-flex flex-column">
+      <label class="pr-1 d-flex flex-column font-weight-bold"> NAME
+        <input type="text" placeholder="Enter Name" value="{{profile.name}}"
+               (change)="profile.name = $event.target.value">
+      </label>
+      <label class="pr-1 d-flex flex-column font-weight-bold"> DOB
+        <input type="date" max="{{stringifyDate(todayDate)}}" value="{{this.stringifyDate(this.profile.dob)}}"
+               (change)="profile.dob = stringToDate($event.target.value)">
+      </label>
+      <label class="pr-1 d-flex flex-column font-weight-bold">ABOUT ME
+        <textarea
+          placeholder="Write something about yourself"
+          rows="10"
+          (change)="profile.aboutParagraph = $event.target.value">{{profile.aboutParagraph}}</textarea>
+      </label>
+    </div>
+    <div class="w-50 mt-3 d-flex flex-column">
+      <label class="pl-1 d-flex flex-column font-weight-bold">ADDRESS
+        <input type="text" placeholder="Enter Address" value="{{profile.address}}"
+               (change)="this.profile.address = $event.target.value">
+      </label>
+      <label class="pl-1 d-flex flex-column font-weight-bold">GRADUATION YEAR
+        <input type="number" placeholder="Enter Graduation Year" value="{{+profile.graduationYear}}"
+               (change)="profile.graduationYear = $event.target.value">
+      </label>
+      <label *ngFor="let contact of profile.contacts"
+             class="pl-1 d-flex flex-column font-weight-bold">{{contact.type.split('_')[1]}}
+        <input type="text" placeholder="Enter {{contact.type.split('_')[1]}}" value="{{contact.contactInfo}}"
+               (change)="contact.contactInfo = $event.target.value">
+      </label>
+      <a class="pl-1 d-flex flex-column" href="{{profile.cv}}" target="_blank">CV</a>
+      <label class="btn-secondary pl-1">
+        <input type="text" class="w-100" (change)="this.profile.cv = $event.target.value" value="{{this.profile.cv}}">
+      </label>
+    </div>
+  </div>
+  <h3 class="w-50 font-weight-light border-bottom border-primary">Projects</h3>
+  <form class= "w-50" [formGroup]="projectFormGroup" (ngSubmit)="onSave()">
+    <div class="w-100 ml-auto mr-auto">
+      <ng-container *ngFor="let project of profile.projects; index as index">
+        <!--    project pic-->
+        <div class="w-100 d-flex flex-column ml-auto mr-auto mb-3">
+          <img class="w-100" src="{{project.imageUrl}}" alt="">
+          <label class="pl-1 w-100 font-weight-bold"> Image URL
+            <input class="w-100" type="text" (input)="project.imageUrl = $event.target.value" value="{{project.imageUrl}}" accept=".jpeg,.jpg">
+          </label>
+        </div>
+        <!--    project info-->
+        <div class="w-100 d-flex flex-row">
+          <div class="w-50 d-flex flex-column">
+            <label class="pr-1 d-flex flex-column font-weight-bold">NAME
+              <input formGroupName="name" type="text" value="{{project.name}}"
+                     (change)="project.name = $event.target.value">
+            </label>
+            <label class="pr-1 d-flex flex-column font-weight-bold">SKILLS
+              <input formGroupName="skills" type="text" value="{{project.skills}}"
+                     (change)="project.skills = $event.target.value">
+            </label>
+            <label class="pr-1 d-flex flex-column font-weight-bold">DESCRIPTION
+              <textarea formGroupName="description" rows="4" value="{{project.description}}"
+                        (change)="project.description = $event.target.value"></textarea>
+            </label>
+          </div>
+          <div class="w-50 d-flex flex-column">
+            <label class="pr-1 d-flex flex-column font-weight-bold">START DATE
+              <input id="{{index}}startDate" max="{{stringifyDate(project.dateComplete)}}" type="date"
+                     value="{{stringifyDate(project.startedDate)}}"
+                     (change)="updateMinDate(project,$event.target,index)">
+            </label>
+            <label class="pr-1 d-flex flex-column font-weight-bold">FINISH DATE
+              <input id="{{index}}finishDate" type="date" min="{{stringifyDate(project.startedDate)}}"
+                     value="{{stringifyDate(project.dateComplete)}}"
+                     (change)="updateMaxDate(project,$event.target,index)">
+            </label>
+            <label class="pr-1 d-flex flex-column font-weight-bold">GITHUB LINK
+              <input type="text" value="{{project.ghLink}}" (change)="project.ghLink = $event.target.value">
+            </label>
+            <label class="pr-1 d-flex flex-column font-weight-bold">LIVE DEMO LINK
+              <input type="text" value="{{project.demoLink}}" (change)="project.demoLink = $event.target.value">
+            </label>
+          </div>
+        </div>
+        <button class="btn-danger w-100 mb-4" type="button" (click)="removeProject(project,index)">Remove Project</button>
+      </ng-container>
+      <button class="btn-primary w-100 mb-4" type="button" (click)="addProject()">Add Project</button>
+    </div>
+    <div class="w-100 mb-4 d-flex flex-row">
+      <button class="btn btn-outline-primary mr-2 ml-auto" routerLink="">Cancel</button>
+      <button class="btn btn-primary ml-2 mr-auto" type="submit">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,44 @@
+<div id="loading-screen">
+  <div class="w-100 d-flex">
+    <div class="spinner-grow ml-auto mr-auto" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow ml-auto mr-auto" style="animation-delay: 0.2s" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+    <div class="spinner-grow ml-auto mr-auto" style="animation-delay: 0.4s" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <h3 style="text-align: center">LOADING...</h3>
+</div>
+<div id="side-bar">
+  <div class="w-75 profile-image-container mb-4">
+    <img id="sideBarPicture" class="w-100" (load)="loaded()" src="{{profile.imageUrl}}" alt="/assets/images/tenor.gif">
+  </div>
+  <h5 id="home" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable user-select-none"
+      (click)="scrollTo('home-content')">
+    Home</h5>
+  <h5 id="about" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable user-select-none"
+      (click)="scrollTo('about-content')">
+    About me</h5>
+  <h5 id="projects" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable user-select-none"
+      (click)="scrollTo('projects-content')">Projects</h5>
+  <h5 id="contacts" class="font-weight-light w-100 align-self-end text-right pr-3 pt-1 pb-2 mb-0 selectable user-select-none"
+      (click)="scrollTo('contacts-content')">Contacts</h5>
+</div>
+<div id="top-bar">
+  <i class="fa fa-bars align-self-center ml-2" style="font-size: 50px" [style.z-index]="2" (click)="showSidebar()"></i>
+  <!--  <div class="align-self-center w-100 h-100 position-absolute d-flex">-->
+  <!--    <h2 class="m-auto" [style.font-family]="'Open Sans'" [style.color]="'white'"> Sean Cunniffe </h2>-->
+  <!--  </div>-->
+</div>
+
+<div id="content">
+  <app-home id="home-content"></app-home>
+  <app-about id="about-content"></app-about>
+  <app-projects id="projects-content"></app-projects>
+  <app-contact id="contacts-content"></app-contact>
+</div>
+
+

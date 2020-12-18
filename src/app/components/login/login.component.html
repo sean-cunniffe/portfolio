@@ -1,0 +1,18 @@
+<div class="vh-100 d-flex flex-column">
+  <div [hidden]="!(unAuth | async)">
+    <h5>UnAuthorised</h5>
+  </div>
+  <form role="form" class="align-self-center mt-auto mb-auto">
+    <div class="form-group">
+      <h5 >Username</h5>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="credentials.username"/>
+    </div>
+    <div class="form-group">
+      <h5>Password</h5>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="credentials.password"/>
+    </div>
+    <div class="w-100 d-flex">
+      <button type="submit" class="btn btn-primary ml-auto" (click)="login()">Submit</button>
+    </div>
+  </form>
+</div>

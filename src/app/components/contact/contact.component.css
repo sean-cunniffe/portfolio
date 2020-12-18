@@ -73,6 +73,8 @@
     --icon-size: 10vw;
     --para-size: 5vw;
   }
+
+
   .contact-container {
     display: flex;
     flex-direction: column;

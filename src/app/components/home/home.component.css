@@ -6,24 +6,20 @@
 .parent {
   display: flex;
   flex-direction: column;
-  height:var(--content-height);
   max-width: 100%;
   margin-left: auto;
+  height: var(--content-height);
   background-color: var(--background-color);
 }
 
-.background-img2 {
+.background-img {
   /*crops from the bottom right*/
   background-position: center;
-  background-repeat: no-repeat;
+  /*background-repeat: no-repeat;*/
   position: absolute;
   bottom: 0;
   right: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: auto;
-  max-width: 100%;
 }
 
 .background-color-filter {
@@ -127,6 +123,7 @@
     font-size: 5vw;
     width: 80vw;
   }
+
 
   .logo {
     min-width: 150px;

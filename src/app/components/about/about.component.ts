@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Profile} from '../../common/Profile';
+import {ProfileService} from '../../services/profile.service';
 
 @Component({
   selector: 'app-about',
@@ -7,12 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   age: number;
+  profile:Profile = new Profile();
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit(): void {
-    this.age = (+new Date()- +new Date("1997-11-02"))/31536000000;
-    this.age = Math.floor(+this.age);
+    //initialize empty profile to avoid errors
+    this.profile.dob = new Date();
+    this.profile.aboutParagraphs = [];
+    this.age = 0;
+
+    this.profileService.profile.subscribe(response =>{
+      this.profile = response;
+      this.profile.aboutParagraphs = response.aboutParagraph.split('/br/');
+      this.age = this.age = (+new Date()- +new Date(this.profile.dob))/31536000000;
+      this.age = Math.floor(+this.age);
+    });
   }
 
 }

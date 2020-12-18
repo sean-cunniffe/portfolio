@@ -8,7 +8,7 @@
       <i class="fa fa-user"></i>
       <div class="att-data">
         <h3>Name</h3>
-        <h4>Sean Cunniffe</h4>
+        <h4>{{profile.name}}</h4>
       </div>
     </div>
     <div class="attribute-box">
@@ -24,22 +24,21 @@
       <i class="fa fa-map-marker"></i>
       <div class="att-data">
         <h3>Address</h3>
-        <h4>Killimor, Co.Galway</h4>
+        <h4>{{profile.address}}</h4>
       </div>
     </div>
     <div class="attribute-box">
       <i class="fa fa-graduation-cap"></i>
       <div class="att-data">
         <h3>Graduation Year</h3>
-        <h4>2020</h4>
+        <h4>{{profile.graduationYear}}</h4>
       </div>
     </div>
   </div>
-  <h3 class="paragraph">I'm a recent graduate from the National University of Ireland, Galway. I graduated with an
-    honours bachelors in Electronic and Computer Engineering. I have done a lot of work with full-stack development in
-    projects using the complete Spring framework on the backend and Angular on the front end. I also enjoy creating
-    interactive websites such as my visual sorting algorithms.
-  </h3><br><br>
-  <h3 class="paragraph">My objectives are to increase my knowledge in all aspects of computer science. I'm always eager
-    to learn new technologies that will enhance my skill set and making developing applications more streamlined.</h3>
+  <ng-container *ngFor="let para of profile.aboutParagraphs;index as index">
+  <h3 class="paragraph">{{para}}</h3>
+    <ng-container *ngIf="index+1 !== profile.aboutParagraphs.length">
+      <br>
+    </ng-container>
+  </ng-container>
 </div>

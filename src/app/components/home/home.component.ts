@@ -1,5 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {ProfileService} from '../../services/profile.service';
+import {Profile} from '../../common/Profile';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +10,24 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
-
+  profile:Profile = new Profile();
   arrowDown = faAngleDown;
-  constructor() { }
+  cvLink: string = '';
+  constructor(public profileService: ProfileService) {
+    profileService.profile.subscribe(response =>{
+      this.profile = response;
+      this.cvLink = this.profileService.baseUrl+'cv/?id='+this.profile.id;
+    });
+  }
+
 
   ngOnInit(): void {
   }
 
   nextSection() {
     window.scroll({
-      top:window.innerHeight,
+      top:window.innerHeight-75,
       behavior: 'smooth'
     })
-    console.log(window.pageYOffset);
   }
 }
