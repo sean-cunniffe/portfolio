@@ -119,8 +119,13 @@
               "devServerTarget": "Resume-Website:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Resume-Website"
 }
