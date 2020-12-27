@@ -33,6 +33,7 @@ export class AdminComponent implements OnInit {
     } else {
       this.buildForm();
       this.profileService.profile.subscribe(response => {
+        console.log(response);
         this.profile = response;
         this.profile.dob = new Date(this.profile.dob);
         this.cvLink = this.profileService.baseUrl + 'cv/?id=' + this.profile.id;

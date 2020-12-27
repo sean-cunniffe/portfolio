@@ -15,6 +15,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BasicAuthInterceptor} from './helpers/basic-auth-interceptor';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {BasicAuthInterceptor} from './helpers/basic-auth-interceptor';
     ContactComponent,
     AdminComponent,
     PortfolioComponent,
-    LoginComponent
+    LoginComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule,

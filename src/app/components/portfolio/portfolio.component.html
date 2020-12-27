@@ -1,17 +1,4 @@
-<div id="loading-screen">
-  <div class="w-100 d-flex">
-    <div class="spinner-grow ml-auto mr-auto" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow ml-auto mr-auto" style="animation-delay: 0.2s" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow ml-auto mr-auto" style="animation-delay: 0.4s" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
-  <h3 style="text-align: center">LOADING...</h3>
-</div>
+<app-loading-screen id="loading-screen"></app-loading-screen>
 <div id="side-bar">
   <div class="w-75 profile-image-container mb-4">
     <img id="sideBarPicture" class="w-100" (load)="loaded()" src="{{profile.imageUrl}}" alt="/assets/images/tenor.gif">
