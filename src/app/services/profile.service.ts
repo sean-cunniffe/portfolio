@@ -1,15 +1,15 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Profile} from '../common/Profile';
-import {Observable, Subject} from 'rxjs';
 import {EnvironmentService} from './environment.service';
+import {ProfileSubject} from '../helpers/profile-subject';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
   baseUrl: string = '';
-  profile: Subject<Profile> = new Subject<Profile>();
+  profile: ProfileSubject = new ProfileSubject();
 
   constructor(private http: HttpClient, private environment: EnvironmentService) {
     this.baseUrl = this.environment.baseUrl;
@@ -18,7 +18,9 @@ export class ProfileService {
 
   private getUser(id: number) {
     this.http.get<Profile>(this.baseUrl + 'users?id=' + id).subscribe(response=>{
+      console.log(response);
       this.profile.next(response);
+      this.profile.profile = response;
     });
   }
 

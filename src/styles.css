@@ -118,6 +118,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 100%;
 }
 
+.btn-primary{
+  background-color: #14487C;
+  border-color: #14487C;
+  font-weight: lighter;
+}
+
+
 @keyframes show-bar {
   from{transform: translateX(-100%)}
   to{transform: translateX(0)}

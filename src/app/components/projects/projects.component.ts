@@ -2,8 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Profile} from '../../common/Profile';
 import {ProfileService} from '../../services/profile.service';
 import {Project} from '../../common/project';
-import {retry} from 'rxjs/operators';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -26,12 +24,12 @@ export class ProjectsComponent implements OnInit {
       this.projects = this.profile.projects;
 
       for (let project of this.projects) {
-        if (project.startedDate === null) {
+        if (project.startedDate == null) {
           project.startedDate = undefined;
         } else {
           project.startedDate = new Date(project.startedDate);
         }
-        if (project.dateComplete === null) {
+        if (project.dateComplete == null) {
           project.dateComplete = undefined;
         } else {
           project.dateComplete = new Date(project.dateComplete);

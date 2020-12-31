@@ -50,15 +50,18 @@ export class PortfolioComponent implements OnInit {
   };
 
 
-
-  constructor(private profileService:ProfileService) {
+  constructor(private profileService: ProfileService) {
   }
 
   ngOnInit(): void {
 
+      this.profileService.profile.subscribe(response => {
+        this.profile = response;
+      });
+
     if (innerWidth <= 768) {
       this.barHeight = 75;
-    }else{
+    } else {
       this.barHeight = 0;
     }
     document.documentElement.style.setProperty('--content-height', (innerHeight - this.barHeight) + 'px');
@@ -66,12 +69,8 @@ export class PortfolioComponent implements OnInit {
     this.setSelected('home');
     this.scrollTo('home-content');
 
-    this.profileService.profile.subscribe(response =>{
-      this.profile = response;
-    });
 
   }
-
 
 
   setSelected(target: string) {

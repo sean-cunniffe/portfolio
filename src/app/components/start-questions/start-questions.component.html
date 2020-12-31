@@ -1,0 +1,51 @@
+<div class="wrapper">
+  <!--  Welcome message-->
+  <div id="welcome-message" *ngIf="!startQuestions" class="w-100 d-flex flex-column ml-auto mr-auto">
+    <h3 class="font-weight-light text-center">Hello, welcome to my web portfolio. Could you answer some
+      questions? It will take less
+      than 2 minutes</h3>
+    <button class="btn-primary font-weight-light ml-auto mr-auto mt-3 pl-4 pr-4"
+            (click)="startQuestions = !startQuestions">Go to Questions
+    </button>
+    <h6 class="font-weight-light ml-auto mr-auto selectable mt-2" (click)="skipQuestions()">Skip</h6>
+  </div>
+
+  <!--  Thank you message-->
+  <div *ngIf="finished" class="w-100 d-flex flex-column ml-auto mr-auto">
+    <h3 class="font-weight-light text-center">Thank you!</h3>
+    <h6 class="font-weight-light ml-auto mr-auto mt-3 pl-4 pr-4">Redirecting to portfolio...
+    </h6>
+  </div>
+
+  <!--  Question-->
+  <ng-container *ngIf="startQuestions && !finished">
+    <div id="question-container">
+      <h3 class="font-weight-light text-left">
+        {{currentQuestion.question}}
+      </h3>
+      <ng-container *ngFor="let option of currentQuestion.options">
+
+        <label class="d-flex flex-row">
+          <input class="mt-auto mb-auto checkbox" type="checkbox"
+                 (click)="currentQuestion.setSelected(option)" [checked]="currentQuestion.answer == option"
+                 [hidden]="currentQuestion.options.length<=1">
+          <h5 class="font-weight-normal m-0 ml-2">{{option.option}}</h5>
+        </label>
+        <label *ngIf="option.textField && currentQuestion.answer == option" class="d-flex flex-column">
+          <input class="w-100" type="text" value="{{currentQuestion.answer.textFieldAnswer}}"
+                 placeholder="Please Specify"
+                 (input)="currentQuestion.answer = option;option.textFieldAnswer = $event.target.value ">
+        </label>
+      </ng-container>
+      <div class="d-flex flex-row w-100">
+        <button class="btn-primary pl-3 pr-3 mr-auto" (click)="previousQuestion()" [hidden]="questionIndex == 0"><i
+          class="fa fa-arrow-left"></i>
+        </button>
+        <button class="btn-primary pl-3 pr-3 ml-auto" (click)="nextQuestion()">
+          <i class="fa fa-arrow-right" [hidden]="questionIndex === questions.length-1"></i>
+          <i class="fa fa-check" [hidden]="questionIndex !== questions.length-1"></i>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+</div>

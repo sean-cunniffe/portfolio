@@ -80,7 +80,7 @@
              target="_blank" style="text-align: center; height: min-content">Live Demo</a>
         </div>
         <h3>{{months[project.startedDate.getMonth()]}}/{{project.startedDate.getFullYear()}}
-        <ng-container *ngIf="project.dateComplete !== undefined;else noComplete">
+        <ng-container *ngIf="project.dateComplete != undefined;else noComplete">
           - {{months[project.dateComplete.getMonth()]}}/{{project.dateComplete.getFullYear()}}
         </ng-container>
           <ng-template #noComplete> - Present</ng-template>
