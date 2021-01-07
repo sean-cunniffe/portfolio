@@ -18,7 +18,20 @@
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
-	margin: auto auto auto auto;
+	margin: 0 auto;
+}
+
+#hot-air-balloon{
+	position: relative;
+	animation: balloon-animation 100s infinite linear;
+	left:-15%;
+}
+
+@keyframes balloon-animation {
+	from{left:-15%; top:50%}
+	25%{left:25%; top:25%}
+	75%{left:75%; top:50%}
+	to{left:100%; top:50%}
 }
 
 .contact-container {
@@ -39,7 +52,7 @@
 
 .contact-container:hover #email-top{
 	fill:#14487c;
-	animation: open-email 2s forwards;
+	animation: open-email 1s forwards;
 }
 
 .contact-container:hover #linkedin-logo{

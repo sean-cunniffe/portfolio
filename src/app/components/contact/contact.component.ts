@@ -15,6 +15,9 @@ export class ContactComponent implements OnInit {
   linkedin:string = '';
   phone:string = '';
 
+  cloudLocationX:Map<number,number> = new Map<number,number>();
+  cloudLocationY:Map<number,number> = new Map<number,number>();
+
   constructor(private profileService:ProfileService) { }
 
   ngOnInit(): void {
@@ -29,10 +32,26 @@ export class ContactComponent implements OnInit {
         }
       }
     })
-    // this.email = 'sean.cunniffe927@gmail.com';
-    // this.linkedin = 'https://linkedin.com';
-    // this.phone = '0873433395';
 
+  }
+
+  randomXNumber(number: number):number {
+    let num = this.cloudLocationX.get(number);
+    return ContactComponent.getRandomNumber(number,num,this.cloudLocationX)
+  }
+  randomYNumber(number: number):number {
+    let num = this.cloudLocationY.get(number);
+    return ContactComponent.getRandomNumber(number,num,this.cloudLocationY)
+  }
+
+  private static getRandomNumber(key:number, value :number, map: Map<number,number>):number{
+    if(value !== undefined){
+      return value;
+    }else{
+      let num2 = Math.floor(Math.random()*100);
+      map.set(key,num2);
+      return num2;
+    }
   }
 
 }
