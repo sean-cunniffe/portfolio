@@ -1,90 +1,161 @@
 * {
-  --para-size: 24px;
-  font-size: 1.5vw;
+	--para-size: 24px;
+	font-size: 1.5vw;
 }
 
 .parent {
-  max-width: 1360px;
-  height: var(--content-height);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  background: var(--background-color);
+	max-width: 1360px;
+	height: var(--content-height);
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	background: var(--background-color);
 }
 
 .contact-flex {
-  width: fit-content;
-  max-width: 90%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  margin: auto auto auto auto;
+	width: fit-content;
+	max-width: 90%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	margin: auto auto auto auto;
 }
 
 .contact-container {
-  display: flex;
-  flex-direction: row;
-  margin: 0 0 5% 0;
+	display: flex;
+	flex-direction: row;
+	margin: 0 0 5% 0;
 }
 
 .contact-container > h3 {
-  margin-left: 5px;
-  font-weight: lighter;
-  font-family: "Roboto";
+	margin-left: 5px;
+	font-weight: lighter;
+	font-family: "Roboto";
 }
 
-.city-container{
-  position: relative;
-  width: 90%;
-  height: 20vh;
-  margin: auto 5% 0 5%;
-  background: url("assets/city-background.svg");
-  background-origin: padding-box;
-  background-size: contain;
-  overflow-x: hidden;
+.contact-container:hover #phone-logo {
+	animation: rotateAn 1s forwards;
 }
-.car-container{
-  position: absolute;
-  bottom: 0;
-  left:0;
-  width: 2%;
-  min-width: 25px;
-  transform: translateX(-100%);
-  animation: car-moving 20s infinite;
+
+.contact-container:hover #email-top{
+	fill:#14487c;
+	animation: open-email 2s forwards;
+}
+
+.contact-container:hover #linkedin-logo{
+	animation: bounce 1s forwards;
+}
+
+.city-container {
+	position: relative;
+	width: 90%;
+	height: 20vh;
+	margin: auto 5% 0 5%;
+	background: url("assets/city-background.svg");
+	background-origin: padding-box;
+	background-size: contain;
+	overflow-x: hidden;
+}
+
+.car-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 2%;
+	min-width: 25px;
+	transform: translateX(-100%);
+	animation: car-moving 20s infinite;
 }
 
 @keyframes car-moving {
-  from{left:0;  transform: translateX(-100%)}
-  49.9%{left:100%;transform: translateX(0) scaleX(1);}
-  50%{left:100%;transform: translateX(0) scaleX(-1);}
-  99.9%{left:0;transform: translateX(-100%) scaleX(-1);}
-  to{left:0;transform: translateX(-100%) scaleX(1);}
+	from {
+		left: 0;
+		transform: translateX(-100%)
+	}
+	49.9% {
+		left: 100%;
+		transform: translateX(0) scaleX(1);
+	}
+	50% {
+		left: 100%;
+		transform: translateX(0) scaleX(-1);
+	}
+	99.9% {
+		left: 0;
+		transform: translateX(-100%) scaleX(-1);
+	}
+	to {
+		left: 0;
+		transform: translateX(-100%) scaleX(1);
+	}
 }
 
-#car{
-  width: 100%;
-  height:100%;
+#car {
+	width: 100%;
+	height: 100%;
+}
+
+
+@keyframes bounce {
+	from{ transform: translateY(0%); }
+	75%{transform: translateY(-20%);}
+	to{transform: translateY(0%);}
+}
+
+@keyframes open-email{
+	from {
+		transform: rotateX(0deg);
+	}
+	to {
+		transform: rotateX(180deg);
+	}
+
+}
+
+@keyframes rotateAn {
+	from {
+		transform: rotate(0deg)
+	}
+	20% {
+		transform: rotate(15deg)
+	}
+	40% {
+		transform: rotate(0deg)
+	}
+	60% {
+		transform: rotate(15deg)
+	}
+	80% {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(15deg)
+	}
 }
 
 
 @media only screen and (max-width: 768px) {
-  * {
-    font-size: 5vw;
-    --icon-size: 10vw;
-    --para-size: 5vw;
-  }
+	* {
+		font-size: 5vw;
+		--icon-size: 10vw;
+		--para-size: 5vw;
+	}
 
 
-  .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin: 0 0 5% 0;
-  }
-  .contact-container > h3 {
-    text-align: center;
-  }
+	.contact-container {
+		display: flex;
+		flex-direction: column;
+		/*justify-items: center;*/
+		margin: 0 0 5% 0;
+	}
 
+	.contact-container > h3 {
+		/*text-align: center;*/
+	}
+
+	#svg-email{
+		margin: 0 auto;
+	}
 
 
 }

@@ -29,6 +29,9 @@ export class ContactComponent implements OnInit {
         }
       }
     })
+    // this.email = 'sean.cunniffe927@gmail.com';
+    // this.linkedin = 'https://linkedin.com';
+    // this.phone = '0873433395';
 
   }
 
